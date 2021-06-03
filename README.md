@@ -15,3 +15,4 @@ step 4 - Run Script
 Step 5 - profit
 
 The extracted fonts are in ttf format and placed in c:\Users\$env:UserName\AdoveFontsExtracted
+
