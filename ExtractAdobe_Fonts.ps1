@@ -1,6 +1,6 @@
 $XMLfile = "$env:Appdata\Adobe\CoreSync\plugins\livetype\c\entitlements.xml"
 $outputFolder = "$env:userprofile\AdobeFontsExtracted" 
-$fontlist = Get-ChildItem "$env:Appdata\Adobe\CoreSync\plugins\livetype\" -Filter *.*tf -Recurse
+$fontlist = Get-ChildItem "$env:Appdata\Adobe\CoreSync\plugins\livetype\" -Recurse -force
 $xml = [xml](get-content $XMLfile)
 $fonts = $xml.typekitSyncState.fonts.font
 
@@ -14,7 +14,7 @@ foreach ($font in $fonts){
     write-host Font name $fontname has id $id
     foreach ($file in $fontlist ){
         if (($file | Select-Object -ExpandProperty Name )  -eq $id){
-            copy-item -path ($file| Select-Object FullName) -Destination  "$outputfolder\$fontname.ttf" -force
+            copy-item -path ($file | Select-Object -ExpandProperty FullName) -Destination  "$outputfolder\$fontname.ttf" -force
         }
     } 
 }
