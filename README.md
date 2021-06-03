@@ -1,6 +1,6 @@
 # AdobeFontExtractor
 
-Adobe hides font. I dont like. So Simple script to extract fonts! Note WINDOWS ONLY
+Adobe hides font. I dont like that. So Simple script to extract fonts! Note WINDOWS ONLY
 
 How To Use - 
 
